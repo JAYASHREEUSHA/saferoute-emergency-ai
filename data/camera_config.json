@@ -1,0 +1,14 @@
+{
+  "_comment": "Maps each camera id from data/floorplan_mall.json to a video source. Fill in real webcam indices (0, 1, ...) or file paths under data/clips/ once you have footage. Corridors left out here still get a plan (unknown-coverage prior in the risk model), they just have no live detection.",
+  "fire_smoke_weights": "runs/fire_smoke/weights/best.pt",
+  "person_weights": "yolov8n.pt",
+  "cameras": {
+    "cam_A1": "data/clips/corridor_a_inner.mp4",
+    "cam_A2": "data/clips/corridor_a_outer.mp4",
+    "cam_B1": "data/clips/corridor_b_inner.mp4",
+    "cam_B2": "data/clips/corridor_b_outer.mp4",
+    "cam_C1": "data/clips/corridor_c_inner.mp4",
+    "cam_C2": "data/clips/corridor_c_middle.mp4",
+    "cam_C3": "data/clips/corridor_c_outer.mp4"
+  }
+}

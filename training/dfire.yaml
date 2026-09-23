@@ -1,0 +1,8 @@
+# Ultralytics data config for fine-tuning YOLOv8n on D-Fire (fire/smoke).
+# Point train/val at your local copy of the dataset (see training/README.md for how to get it).
+path: ../datasets/dfire   # relative to this file; override with an absolute path if you prefer
+train: images/train
+val: images/val
+names:
+  0: fire
+  1: smoke

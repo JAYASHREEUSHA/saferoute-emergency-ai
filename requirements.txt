@@ -1,0 +1,11 @@
+# Steps 1-2 (routing core, simulator) use only the Python standard library, plus:
+pytest>=8.0
+
+# Step 3 (computer vision). Install these on a machine with a webcam / GPU if you have one;
+# they are NOT needed to run scripts/run_scenario.py, run_experiment.py, or the test suite.
+opencv-python>=4.9
+ultralytics>=8.4       # pulls PyTorch; heavy install. Training itself needs a GPU (see training/README.md)
+
+fastapi>=0.115
+uvicorn[standard]>=0.30
+httpx>=0.27          # needed by FastAPI's TestClient (tests/test_api.py)

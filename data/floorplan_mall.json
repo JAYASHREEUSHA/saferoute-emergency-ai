@@ -1,0 +1,24 @@
+{
+  "name": "Demo mall (3 exits)",
+  "notes": "Coordinates in metres, y axis points north. Edge length defaults to straight-line distance. Edges with a camera get observations; edges without one use the unknown-coverage prior.",
+  "nodes": [
+    {"id": "S",       "x": 20, "y": 20, "kind": "start",    "label": "Start"},
+    {"id": "JA",      "x": 12, "y": 20, "kind": "junction", "label": "Junction A"},
+    {"id": "EXIT_A",  "x": 0,  "y": 20, "kind": "exit",     "label": "Exit A"},
+    {"id": "JB",      "x": 28, "y": 20, "kind": "junction", "label": "Junction B"},
+    {"id": "EXIT_B",  "x": 48, "y": 20, "kind": "exit",     "label": "Exit B"},
+    {"id": "C1",      "x": 20, "y": 30, "kind": "junction", "label": "Junction C1"},
+    {"id": "C2",      "x": 20, "y": 45, "kind": "junction", "label": "Junction C2"},
+    {"id": "EXIT_C",  "x": 36, "y": 45, "kind": "exit",     "label": "Exit C"}
+  ],
+  "edges": [
+    {"id": "S-JA",      "u": "S",  "v": "JA",     "width": 3, "camera": "cam_A1", "label": "Corridor A (inner)"},
+    {"id": "JA-EXIT_A", "u": "JA", "v": "EXIT_A", "width": 3, "camera": "cam_A2", "label": "Corridor A (outer)"},
+    {"id": "S-JB",      "u": "S",  "v": "JB",     "width": 3, "camera": "cam_B1", "label": "Corridor B (inner)"},
+    {"id": "JB-EXIT_B", "u": "JB", "v": "EXIT_B", "width": 3, "camera": "cam_B2", "label": "Corridor B (outer)"},
+    {"id": "S-C1",      "u": "S",  "v": "C1",     "width": 3, "camera": "cam_C1", "label": "Corridor C (inner)"},
+    {"id": "C1-C2",     "u": "C1", "v": "C2",     "width": 3, "camera": "cam_C2", "label": "Corridor C (middle)"},
+    {"id": "C2-EXIT_C", "u": "C2", "v": "EXIT_C", "width": 3, "camera": "cam_C3", "label": "Corridor C (outer)"},
+    {"id": "C1-JB",     "u": "C1", "v": "JB",     "width": 3, "camera": null,     "label": "Cross link C1-B"}
+  ]
+}
